@@ -1,0 +1,22 @@
+#include <stdio.h>
+typedef struct{  int x, y; }vec;
+
+vec RR90(vec t) { //Right Rotate 90
+	vec iHat={0,-1};
+	vec jHat={1,0};
+	
+	k.x = (t.x*iHat.x) + (t.y*jHat.x);
+	k.y = (t.x*iHat.y) + (t.y*jHat.y);
+	return k; }
+
+int main()
+{
+	vec a={1,2};
+	vec c;
+	
+	c = RR90(a);
+	printf("|%+d|\n|%+d|",c.x, c.y );	
+	return 0;
+}
+
+
