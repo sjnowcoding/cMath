@@ -1,0 +1,25 @@
+#include <stdio.h>
+#include <math.h>
+typedef struct { float x, y; } vec;
+double D2R(int A) { return A*M_PI/180.0; }
+
+vec RMatrix(int A, vec t) {
+	double ang=D2R(A);
+	vec iHat = {t.x * cos(ang), t.x * sin(ang)};
+	vec jHat = {t.y* -sin(ang), t.y* cos(ang)};	
+	vec newT = {iHat.x + jHat.x, iHat.y+jHat.y};
+	return newT;	
+}
+
+int main()
+{
+	vec t={1,0};
+	vec nt = RMatrix(90,t);
+	printf("|%.2lf|\n|%.2lf|",nt.x, nt.y);
+	return 0;
+}
+
+
+
+
+
