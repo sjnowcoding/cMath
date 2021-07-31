@@ -1,0 +1,17 @@
+#include <stdio.h>
+#include <math.h>
+
+int main()
+{
+	double angD=40;
+	
+	double angR = 40 * M_PI/180;
+	
+	printf("radian:%lf\n", angR);
+	
+	printf("sin:%lf, cos:%lf\n", sin(angR), cos(angR));
+	
+	return 0;
+}
+
+
